@@ -1,0 +1,94 @@
+My Notes:
+
+git init
+- Adds .git folder to the directory
+
+git status
+- Checks the files being tracked in the dir
+
+git add <filename> .
+- adds the file to the tracker
+
+git commit -m "message"
+- saves the state and tracks the new files in the dir
+
+git log
+- gets the history of commits made
+
+git checkout <hash id/existing branch name>
+- will load the state of the hash id from log or different branch name
+
+git pull
+- will download all branches for this project from all users into the memory
+
+git pull origin <existing branch name>
+- downloads the branch state from cloud to local
+
+git pull origin <existing branch name> --force
+- (not recommended) forces the above command without considering changes
+
+git push
+- (not recommended) pushes current local version to all cloud versions
+
+git push origin <existing branch name>
+- uploads current local version to cloud
+
+git push origin <existing branch name> --force
+- (not recommended) forces the above command without considering changes
+
+git checkout -b <new branch name>
+- makes a copy of the current branch to new branch name
+
+git merge <existing branch name>
+- shows changes and conflicts between current and given branches
+
+git branch
+- gets all the branches in local repo
+
+git branch -a
+- red highlight means all branches in cloud
+
+git fetch
+- retrieves all the pushed branches of all users to the cloud which are now available to be 'checkout'.
+
+git stash
+- removes all uncommitted changes to current branch state
+
+git stash pop
+- undoes the previous command
+
+git clone <SSH/HTTPS Clone ID>
+- Clone the project to local
+
+(Deleting branches, not recommended)
+
+
+
+
+Ali's Notes:
+
+Create branch - git checkout -b branchname
+
+Switch between branches - git checkout branchname
+
+To add files  - git add filePath
+
+To add all files/changes - git add .
+
+To commit  - git commit -m "message"
+
+To pull  - git pull origin branchName
+
+To push - git push origin branchName
+
+To fetch - git fetch
+
+To see commit log - git log
+
+To see all the branches of cloud repository - git branch -a
+
+To see all the branches available in local repo - git branch
+
+To remove temporary changes - git stash
+
+Change the head to a commit hash - git checkout commitHash

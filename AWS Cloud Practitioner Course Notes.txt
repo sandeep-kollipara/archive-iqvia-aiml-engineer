@@ -1,0 +1,62 @@
+Notes - 19th Apr, '23
+
+- AWS Services are region-based. If any are unavailable, the user must reselect a region where it's supported.
+
+
+IAM:Identity and Access Management
+
+- IAM is a global service
+- Users and Groups definitions. Groups can only contain users. Exception: root
+- Policy/Permission through JSON
+- Utilize Least Privilege Principle for user access
+
+- Best advised to login as an IAM user in general instead of root (why?)
+- By setting an alias, you can create an AWS login page for your users
+
+- Policies are additive if user is present across multiple groups
+- Policies can also be inline i.e., specific to a user without a group
+
+- IAM Policy Struct JSON  
+- One can create policies with custom actions 
+
+- AWS accessed through Management Console, CLI or SDK
+- AWS CLI is bulit on AWS SDK for Python named Boto (what?)
+- All users can login to CLI through Access keys under Security Credentials of IAM/Users
+
+- IAM Roles for AWS Services can be assigned just like users
+	- EC2 Instance roles
+	- Lambda f roles
+	- CloudFormation roles
+
+- IAM Credentials Report (user-lvl) and IAM Access Advisor (acc-lvl) can be generated to review security of AWS 
+
+EC2: Elastic Compute Cloud (IaaS)
+
+contains EC2 (name, Cloud VM), EBS (???, Cloud storage), ELB (Elastic Load Bouncer, ???), ASG (Auto Scaling Group, scaling services)
+
+Configs:
+
+- OS
+
+- RAM
+
+- Storage
+	- Network-attached Storage (EBS, EFS)
+	- hardware (EC2 Instance Store ???)
+
+- Network card, Public IP
+
+- Firewall rules: sec grp
+
+- Bootstrap ???: automate tasks at launch
+
+Note: EC2 User data script runs with root user
+
+The public IP may change upon reboot of EC2 but the private IP remains const.
+
+Instance types: mainly across computation, memory (RAM) and networking.
+
+EC2 Instance Name convention: Instance class + Generation + . Size of computer like e.g. m6.2xlarge
+
+Security group rules can reference by IP or security grp.???
+
